@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const expressHbs = require('express-handlebars');
 const app = express();
 
-app.engine('handlebars', expressHbs());
-app.set('view engine', 'handlebars');
+app.engine('hbs', expressHbs( { extname: "hbs",defaultLayout: "main-layout", layoutsDir: "views/layouts/",}));
+app.set('view engine', 'hbs');
 app.set('views', 'views');
 
 const adminData = require('./routes/admin');

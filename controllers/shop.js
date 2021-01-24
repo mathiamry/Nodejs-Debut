@@ -17,11 +17,6 @@ exports.getProducts =(req, res, next)=>{
     };
 
 
-exports.postAddProduct = (req, res, next) => {
-    product = new Product(req.body.title);
-    product.save();
-    res.redirect('/');
-    };
 
 
 exports.getCart = (req, res, next) => {
